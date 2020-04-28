@@ -3,6 +3,10 @@
 
 def pow(a, b):
     a_b = 1
+
+    if a == 0 and b == 0:
+        return;
+
     if a == 0:
         return (0)
 
