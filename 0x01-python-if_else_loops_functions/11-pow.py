@@ -5,10 +5,13 @@ def pow(a, b):
     a_b = 1
 
     if a == 0 and b == 0:
-        return;
+        return
 
     if a == 0:
-        return (0)
+        if b > 0:
+            return (0)
+        else:
+            return
 
     while b != 0:
         if b > 0:
