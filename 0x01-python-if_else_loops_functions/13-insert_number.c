@@ -17,22 +17,23 @@ listint_t *insert_node(listint_t **head, int number)
 	if (head == NULL)
 		return (NULL);
 
-	if (current_node->n > number)
+	if (*head == NULL || current_node->n > number)
 	{
 		current_node = malloc(sizeof(listint_t));
 		if (current_node == NULL)
 			return (NULL);
 
-		current_node->n = number;
 		current_node->next = *head;
+
+		current_node->n = number;
 		*head = current_node;
 		return (current_node);
 	}
 
-	while (number > (current_node->next)->n && current_node->next != NULL)
+	while (current_node->next != NULL && number > (current_node->next)->n)
 		current_node = current_node->next;
 
-	if (current_node->n == number)
+	if (current_node->next != NULL && (current_node->next)->n == number)
 		return (NULL);
 	aux_ptr = current_node;
 
