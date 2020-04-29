@@ -33,8 +33,6 @@ listint_t *insert_node(listint_t **head, int number)
 	while (current_node->next != NULL && number > (current_node->next)->n)
 		current_node = current_node->next;
 
-	if (current_node->next != NULL && (current_node->next)->n == number)
-		return (NULL);
 	aux_ptr = current_node;
 
 	current_node = malloc(sizeof(listint_t));
