@@ -8,4 +8,4 @@ def weight_average(my_list=[]):
     if sum_elements != 0:
         w_average /= sum_elements
 
-    return w_average    
+    return w_average
