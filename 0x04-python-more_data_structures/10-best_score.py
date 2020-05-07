@@ -10,3 +10,4 @@ def best_score(a_dictionary):
             if a_dictionary[key] > max_int:
                 key_max_int = key
         return key_max_int
+    return None
