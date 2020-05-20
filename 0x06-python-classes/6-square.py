@@ -62,7 +62,7 @@ class Square:
         while size != 0:
             for i in range(squares):
                 if i < position:
-                    print('_', end='')
+                    print(' ', end='')
                 else:
                     print('#', end='')
             size -= 1
