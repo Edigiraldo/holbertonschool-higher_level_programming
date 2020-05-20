@@ -21,9 +21,9 @@ class Square:
 
     @size.setter
     def size(self, value):
+        """property setter method for set size attribute."""
         if type(value) != int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        """property setter method for set size attribute."""
         self.__size = value
