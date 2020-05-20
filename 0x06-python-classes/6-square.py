@@ -60,9 +60,8 @@ class Square:
         squares = size
         position = self.__position
         while size != 0:
-            if position[1] == 0:
-                for j in range(position[0]):
-                    print(' ', end='')
+            for j in range(position[0]):
+                print(' ', end='')
             for i in range(squares):
                     print('#', end='')
             size -= 1
