@@ -41,4 +41,5 @@ class Square:
                 print('#', end='')
             size -= 1
             print()
-        print()
+        if squares == 0:
+            print()
