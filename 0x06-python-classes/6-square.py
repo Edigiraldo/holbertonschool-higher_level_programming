@@ -42,15 +42,15 @@ class Square:
     @property
     def position(self):
         """property getter that returns the tuple position."""
-        return position
+        return self.__position
 
     @position.setter
     def position(self, value):
         """property setter method for set position attribute."""
-        if (type(position) != tuple or type(position[0]) != int or
-           type(position[1]) != int):
+        if (type(value) != tuple or type(value[0]) != int or
+           type(value[1]) != int):
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif position[0] < 0 or position[1] < 0:
+        elif value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
