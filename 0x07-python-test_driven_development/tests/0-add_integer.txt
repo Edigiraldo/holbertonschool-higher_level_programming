@@ -1,0 +1,27 @@
+add module test
+====================
+
+add function
+====================
+Let's import the 0-add_integer.py module
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(-598, 2)
+    -596
+
+    >>> add_integer(5.3, 0.7)
+    5
+
+    >>> add_integer(True, 9)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(9, True)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
