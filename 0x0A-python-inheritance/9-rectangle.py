@@ -1,6 +1,20 @@
 #!/usr/bin/python3
 """"Module for Rectangle class."""
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+class BaseGeometry:
+    """BaseGeometry class."""
+    def area(self):
+        """raise a exception."""
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """method that validates value. It has to be an
+        integer greater than zero."""
+        if type(value) != int:
+            raise Exception("{} must be an integer".format(name))
+        elif value <= 0:
+            raise Exception("{} must be greater than 0".format(name))
 
 
 class Rectangle(BaseGeometry):
@@ -18,9 +32,5 @@ class Rectangle(BaseGeometry):
         return self.__width * self.__height
 
     def __str__(self):
-        """Returns description."""
-        return "[Rectangle] ""{}/{}".format(self.__width, self.__height)
-
-    def __repr__(self):
         """Returns description."""
         return "[Rectangle] ""{}/{}".format(self.__width, self.__height)
