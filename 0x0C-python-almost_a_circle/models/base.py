@@ -18,7 +18,8 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """returns the JSON string representation of list_dictionaries."""
-        if list_dictionaries is None or len(list_dictionaries) == 0:
+        if list_dictionaries is None or (type(list_dictionaries) == list and
+                                         len(list_dictionaries) == 0):
             return '"[]"'
         return json.dumps(list_dictionaries)
 
@@ -53,6 +54,30 @@ class Base:
         """returns a list of instances."""
         dic = None
         with open(cls.__name__ + ".json") as my_file:
+            dic = my_file.read()
+        if dic is None:
+            return []
+        list1 = cls.from_json_string(dic)
+        list1 = [cls.create(**dic) for dic in list1]
+        return list1
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Serializes in CSV."""
+        filename = cls.__name__ + ".csv"
+        if list_objs is not None:
+            other_list = [r.to_dictionary() for r in list_objs]
+        else:
+            other_list = []
+        json_str = cls.to_json_string(other_list)
+        with open(filename, 'w') as my_file:
+            my_file.write(json_str)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Deserializes in CSV."""
+        dic = None
+        with open(cls.__name__ + ".csv") as my_file:
             dic = my_file.read()
         if dic is None:
             return []
