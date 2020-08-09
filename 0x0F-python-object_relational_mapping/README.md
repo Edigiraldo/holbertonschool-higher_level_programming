@@ -12,7 +12,7 @@ Write a script that lists all `states` from the database `hbtn_0e_0_usa`:
 -   Results must be displayed as they are in the example below
 -   Your code should not be executed when imported
 
-#### 1\. Filter states mandatory
+#### 1\. Filter states
 
 Write a script that lists all `states` with a `name` starting with `N` (upper N) from the database `hbtn_0e_0_usa`:
 
@@ -23,7 +23,7 @@ Write a script that lists all `states` with a `name` starting with `N` (up
 -   Results must be displayed as they are in the example below
 -   Your code should not be executed when imported
 
-#### 2\. Filter states by user input mandatory
+#### 2\. Filter states by user input
 
 Write a script that takes in an argument and displays all values in the `states` table of `hbtn_0e_0_usa` where `name` matches the argument.
 
@@ -35,11 +35,11 @@ Write a script that takes in an argument and displays all values in the `states
 -   Results must be displayed as they are in the example below
 -   Your code should not be executed when imported
 
-#### 3\. SQL Injection... mandatory
+#### 3\. SQL Injection...
 
 Wait, do you remember the previous task? Did you test `"Arizona'; TRUNCATE TABLE states ; SELECT * FROM states WHERE name = '"` as an input?
 
-#### 4\. Cities by states mandatory
+#### 4\. Cities by states
 
 Write a script that lists all `cities` from the database `hbtn_0e_4_usa`
 
@@ -51,7 +51,7 @@ Write a script that lists all `cities` from the database `hbtn_0e_4_usa`
 -   Results must be displayed as they are in the example below
 -   Your code should not be executed when imported
 
-#### 5\. All cities by state mandatory
+#### 5\. All cities by state
 
 Write a script that takes in the name of a state as an argument and lists all `cities` of that state, using the database `hbtn_0e_4_usa`
 
@@ -63,7 +63,7 @@ Write a script that takes in the name of a state as an argument and lists all `
 -   The results must be displayed as they are in the example below
 -   Your code should not be executed when imported
 
-#### 6\. First state model mandatory
+#### 6\. First state model
 
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/283/63890860.jpg)
 
@@ -78,7 +78,7 @@ Write a python file that contains the class definition of a `State` and an ins
 -   Your script should connect to a MySQL server running on `localhost` at port `3306`
 -   **WARNING:** all classes who inherit from `Base` **must** be imported before calling `Base.metadata.create_all(engine)`
 
-#### 7\. All states via SQLAlchemy mandatory
+#### 7\. All states via SQLAlchemy
 
 Write a script that lists all `State` objects from the database `hbtn_0e_6_usa`
 
@@ -90,7 +90,7 @@ Write a script that lists all `State` objects from the database `hbtn_0e_6_us
 -   The results must be displayed as they are in the example below
 -   Your code should not be executed when imported
 
-#### 8\. First state mandatory
+#### 8\. First state
 
 Write a script that prints the first `State` object from the database `hbtn_0e_6_usa`
 
@@ -104,7 +104,7 @@ Write a script that prints the first `State` object from the database `hbtn_0
 -   If the table `states` is empty, print `Nothing` followed by a new line
 -   Your code should not be executed when imported
 
-#### 9\. Contains `a` mandatory
+#### 9\. Contains `a`
 
 Write a script that lists all `State` objects that contain the letter `a` from the database `hbtn_0e_6_usa`
 
@@ -116,7 +116,7 @@ Write a script that lists all `State` objects that contain the letter `a` fr
 -   The results must be displayed as they are in the example below
 -   Your code should not be executed when imported
 
-#### 10\. Get a state mandatory
+#### 10\. Get a state
 
 Write a script that prints the `State` object with the `name` passed as argument from the database `hbtn_0e_6_usa`
 
@@ -129,7 +129,7 @@ Write a script that prints the `State` object with the `name` passed as argu
 -   If no state has the name you searched for, display `Not found`
 -   Your code should not be executed when imported
 
-#### 11\. Add a new state mandatory
+#### 11\. Add a new state
 
 Write a script that adds the `State` object "Louisiana" to the database `hbtn_0e_6_usa`
 
@@ -140,7 +140,7 @@ Write a script that adds the `State` object "Louisiana" to the database `hbtn
 -   Print the new `states.id` after creation
 -   Your code should not be executed when imported
 
-#### 12\. Update a state mandatory
+#### 12\. Update a state
 
 Write a script that changes the name of a `State` object from the database `hbtn_0e_6_usa`
 
@@ -151,7 +151,7 @@ Write a script that changes the name of a `State` object from the database `h
 -   Change the name of the `State` where `id = 2` to `New Mexico`
 -   Your code should not be executed when imported
 
-#### 13\. Delete states mandatory
+#### 13\. Delete states
 
 Write a script that deletes all `State` objects with a name containing the letter `a` from the database `hbtn_0e_6_usa`
 
@@ -161,7 +161,7 @@ Write a script that deletes all `State` objects with a name containing the let
 -   Your script should connect to a MySQL server running on `localhost` at port `3306`
 -   Your code should not be executed when imported
 
-#### 14\. Cities in state mandatory
+#### 14\. Cities in state
 
 Write a Python file similar to `model_state.py` named `model_city.py` that contains the class definition of a `City`.
 
