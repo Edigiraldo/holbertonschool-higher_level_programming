@@ -21,5 +21,5 @@ if __name__ == '__main__':
     for element in data:
         print(element)
 
-cur.close()
-db.close()
+    cur.close()
+    db.close()
