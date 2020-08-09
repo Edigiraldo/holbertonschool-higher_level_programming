@@ -22,12 +22,10 @@ if __name__ == '__main__':
                            ORDER BY cities.id ASC", {'state': argv[4]})
 
     data = cur.fetchall()
-    data = list(data)
-    for i in range(num_rows):
-        if i != num_rows - 1:
-            print(data[i][0], end=', ')
-        else:
-            print(data[i][0])
+    list = []
+    for element in data:
+        list.append(element[0])
+    print(', '.join(list))
 
     cur.close()
     db.close()
