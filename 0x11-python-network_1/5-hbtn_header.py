@@ -5,5 +5,8 @@ from sys import argv
 
 if __name__ == "__main__":
     response = requests.get(argv[1])
-    var = response.headers.get['X-Request-Id']
-    print(var)
+    try:
+        var = response.headers['X-Request-Id']
+        print(var)
+    except:
+        pass
