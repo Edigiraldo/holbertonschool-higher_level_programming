@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""comment."""
+"""10 commits from repository."""
 import requests
 from sys import argv
 
@@ -15,4 +15,5 @@ if __name__ == "__main__":
     for i in range(0, 10):
         sha = list[i].get('sha')
         name = list[i].get('commit').get('author').get('name')
-        print(sha, name)
+        print(sha, end=': ')
+        print(name)
