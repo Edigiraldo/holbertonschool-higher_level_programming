@@ -9,7 +9,7 @@ if __name__ == "__main__":
     if len(argv) > 1:
         q = argv[1]
 
-    url = 'http://a82acf3b689c.9790342a.hbtn-cod.io:5000/search_user'
+    url = 'http://0.0.0.0:5000/search_user'
     response = requests.post(url, data={'q': q})
     try:
         json = response.json()
