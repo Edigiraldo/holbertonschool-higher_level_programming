@@ -19,4 +19,4 @@ if __name__ == "__main__":
         if not bool(json):  # if empty dict
             print("No result")
         else:
-            print(json['id'], json['name'])
+            print("[{}]".format(json['id']), json['name'])
