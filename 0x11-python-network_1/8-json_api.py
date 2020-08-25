@@ -13,7 +13,7 @@ if __name__ == "__main__":
     response = requests.post(url, data={'q': q})
     try:
         json = response.json()
-        if not bool(json):  # if empty dict
+        if len(json) == 0:  # if empty dict
             print("No result")
         else:
             id = json['id']
