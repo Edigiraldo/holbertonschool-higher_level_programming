@@ -11,9 +11,12 @@ if __name__ == "__main__":
           '/' + repository + '/commits'
 
     response = requests.get(url)
-    list = response.json()
-    for i in range(0, 10):
-        sha = list[i].get('sha')
-        name = list[i].get('commit').get('author').get('name')
-        print(sha, end=': ')
-        print(name)
+    try:
+        list = response.json()
+        for i in range(0, 10):
+            sha = list[i].get('sha')
+            name = list[i].get('commit').get('author').get('name')
+            print(sha, end=': ')
+            print(name)
+    except IndexError:
+        pass
