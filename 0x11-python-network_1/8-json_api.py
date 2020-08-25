@@ -5,23 +5,19 @@ from sys import argv
 
 if __name__ == "__main__":
 
-    letter = ""
+    q = ""
     if len(argv) > 1:
-        letter = argv[1]
+        q = argv[1]
 
     url = 'http://a82acf3b689c.9790342a.hbtn-cod.io:5000/search_user'
-    response = requests.post(url, data={'q': letter})
+    response = requests.post(url, data={'q': q})
     try:
         json = response.json()
-    except:
-        print("Not a valid JSON")
-    else:
         if not bool(json):  # if empty dict
             print("No result")
         else:
-            try:
-                id = json['id']
-                name = json['name']
-                print("[{}] {}".format(id, name))
-            except:
-                pass
+            id = json['id']
+            name = json['name']
+            print("[{}] {}".format(id, name))
+    except ValueError:
+        print("Not a valid JSON")
