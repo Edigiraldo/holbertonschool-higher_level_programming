@@ -14,6 +14,6 @@ request(url, function (error, response, body) {
         counter += 1;
       }
     }
-    console.log(counter);
   }
+  console.log(counter);
 });
